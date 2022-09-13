@@ -1,0 +1,18 @@
+@using Rocky_Utility
+@model OrderHeader
+<div class="text-center">
+    @if (Model.Id != null)
+    {
+        <h1 class="text-info"> Order Created</h1>
+        <p>Order @Model.Id has been Created</p>
+    }
+    else
+    {
+        <h1 class="text-info">
+            Inquiry Information
+        </h1>
+        <p> we have recieved your inquiry ans an admin will attend to you shortly</p>
+    }
+    
+    <img src="@WC.ImagePath/patio.jpg" width="80%"/>
+</div>

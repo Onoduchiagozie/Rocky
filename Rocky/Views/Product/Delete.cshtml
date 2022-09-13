@@ -1,0 +1,125 @@
+@using Rocky_Utility
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model Rocky.Models.Product
+
+@{
+    var title = "Delete Product";
+    Layout = "_Layout";
+}
+
+<form method="post" enctype="multipart/form-data" asp-action="DeletePost">
+    <input asp-for="Id" hidden/>
+    <div class="p-3 border">
+        <div class="form-group row">
+            <h2 class="text-info pl-3">@title</h2>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Name"></label>
+                    </div>
+                    <div class="col-8">
+                        <input disabled="disabled" asp-for="Name" class="form-control"/>
+                    </div>
+
+                </div>
+                <br/>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Price"></label>
+                    </div>
+                    <div class="col-8">
+                        <input disabled="disabled" asp-for="Price" class="form-control"/>
+                    </div>
+                </div>
+                                <br/>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Description"></label>
+                    </div>
+                    <div class="col-8">
+                        <textarea disabled="disabled" asp-for="Description" class="form-control summernote"></textarea>
+                    </div>
+                </div>
+                                <br/>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        Image
+                    </div>
+                    <div class="col-8">
+                        <input type="file" name="files" id="uploadBox" multiple  class="form-control"/>
+                    </div>
+                </div>
+                                <br/>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="CategoryId"></label>
+                    </div>
+                    <div class="col-8">
+                        <input disabled="disabled" asp-for="Category.Name" class="form-control"/>
+                    </div>
+                </div>
+                <br/>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="ApplicationTypeId"></label>
+                        </div>
+                    <div class="col-8">
+                                        <input disabled="disabled" asp-for="ApplicationType.Name" class="form-control"/>
+                                    </div>
+                                    </div>
+                <br/>
+                <div class="form-group row">
+                    <div class="col-8 offset-4 row">
+                        <div class="col">
+                            <input type="submit" class="btn btn-danger w-100" width="100%" value="Delete"/>
+                        </div>
+                        <div class="col">
+                            <a asp-action="Index" class="btn btn-success w-100" width="100%"> <i class="fas fa-sign-out"></i> &nbsp;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 pt-4 ">
+                <img src="@WC.ImagePath/@Model.Image" style="border-radius:5px; border: 1px solid #bbbbbb;"/>
+
+                @* Keep this empty *@
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts
+{
+    @{
+        <partial name="_ValidationScriptsPartial"/>
+    }
+    <script type="text/javascript">
+        $(document).ready(function() {
+      $('.summernote').summernote({
+          disable:true,
+          height:250
+          });
+    });
+    </script>
+    <script>
+    // function validateInput() {
+    //   if (document.getElementById("uploadBox").value=== ""){
+    //       Swal.fire(
+    //           'Error',
+    //           'Please Upload An Image',
+    //           'error',
+    //          
+    //       )
+    //       return false;
+    //   }
+    //       return true;
+    //   }
+    </script>
+
+
+
+}

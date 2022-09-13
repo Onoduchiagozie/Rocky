@@ -1,0 +1,12 @@
+/home/valentine/RiderProjects/Rocky/Rocky_Utility/bin/Debug/net6.0/Rocky_Utility.deps.json
+/home/valentine/RiderProjects/Rocky/Rocky_Utility/bin/Debug/net6.0/Rocky_Utility.dll
+/home/valentine/RiderProjects/Rocky/Rocky_Utility/bin/Debug/net6.0/ref/Rocky_Utility.dll
+/home/valentine/RiderProjects/Rocky/Rocky_Utility/bin/Debug/net6.0/Rocky_Utility.pdb
+/home/valentine/RiderProjects/Rocky/Rocky_Utility/obj/Debug/net6.0/Rocky_Utility.csproj.AssemblyReference.cache
+/home/valentine/RiderProjects/Rocky/Rocky_Utility/obj/Debug/net6.0/Rocky_Utility.GeneratedMSBuildEditorConfig.editorconfig
+/home/valentine/RiderProjects/Rocky/Rocky_Utility/obj/Debug/net6.0/Rocky_Utility.AssemblyInfoInputs.cache
+/home/valentine/RiderProjects/Rocky/Rocky_Utility/obj/Debug/net6.0/Rocky_Utility.AssemblyInfo.cs
+/home/valentine/RiderProjects/Rocky/Rocky_Utility/obj/Debug/net6.0/Rocky_Utility.csproj.CoreCompileInputs.cache
+/home/valentine/RiderProjects/Rocky/Rocky_Utility/obj/Debug/net6.0/Rocky_Utility.dll
+/home/valentine/RiderProjects/Rocky/Rocky_Utility/obj/Debug/net6.0/ref/Rocky_Utility.dll
+/home/valentine/RiderProjects/Rocky/Rocky_Utility/obj/Debug/net6.0/Rocky_Utility.pdb
