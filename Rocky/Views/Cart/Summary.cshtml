@@ -3,7 +3,7 @@
 @using Rocky_Utility
 @model Rocky.Models.ViewModel.ProductUserVm
 
-<form method="post" id="payment-form">
+<form id="payment-form" method="post" >
     <input hidden="hidden" asp-for="ApplicationUser.Id"/>
     <br/>
     <div class="backgroundWhiteBorder">
@@ -173,31 +173,33 @@
         </div>
     </div>
 </form>
-   <button id="submit-button">Request payment method</button>
 
 
 @section Scripts{
-    <partial name="_ValidationScriptsPartial"/>
+    @* <partial name="_ValidationScriptsPartial"/> *@
     <script src="https://js.braintreegateway.com/web/dropin/1.33.4/js/dropin.min.js"></script>
     <script type="text/javascript">
     var form = document.querySelector("#payment-form");
     var clientToken="@ViewBag.ClientToken";
+        var button = document.querySelector('#submit-button');
     
-      braintree.dropin.create({
-          authorization:clientToken,
-          container: '#dropin-container'
-        }, function (createErr, instance) {
-          button.addEventListener('submit', function () {
-              event.preventDefault();
-            instance.requestPaymentMethod(function (requestPaymentMethodErr, payload) {
-              // Submit payload.nonce to your server
-              document.querySelector('#nonce').value=payload.nonce;
-              form.submit();
-              
-              
+    
+        braintree.dropin.create({
+              authorization: clientToken,
+              container: '#dropin-container'
+            }, function (createErr, instance) {
+              form.addEventListener('submit', function () {
+                                          event.preventDefault();
+    
+                instance.requestPaymentMethod(function (requestPaymentMethodErr, payload) {
+                  // Submit payload.nonce to your server
+    
+                        document.querySelector('#nonce').value=payload.nonce;
+                                form.submit();
+                });
+              });
             });
-          });
-        });
+    
     
     
     </script>

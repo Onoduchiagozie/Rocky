@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using System.Text;
+using Braintree;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Rocky_Utility;
@@ -85,9 +86,8 @@ public class CartController : Controller
 
     }
     
-    [HttpPost]
     [ValidateAntiForgeryToken] 
-    [ActionName("Index")]
+    [HttpPost,ActionName("Index")]
     public IActionResult IndexPost(IEnumerable<Product> prodList)
     {
         List<ShoppingCart> shoppingCartList = new List<ShoppingCart>();
@@ -106,7 +106,8 @@ public class CartController : Controller
         {
             if (HttpContext.Session.Get<int>(WC.SessionInquiryId) != 0)
             {
-                InquiryHeader inquiryHeader = _headerRepository.FirstOrDefault(u => u.Id == HttpContext.Session.Get<int>(WC.SessionInquiryId));
+                InquiryHeader inquiryHeader = _headerRepository.FirstOrDefault(u =>
+                    u.Id == HttpContext.Session.Get<int>(WC.SessionInquiryId));
                 applicationUser = new ApplicationUser()
                 {
                     Email = inquiryHeader.Email,
@@ -154,7 +155,7 @@ public class CartController : Controller
     }
     
     [HttpPost,ActionName("Summary")]
-    public IActionResult SummaryPost()
+    public IActionResult SummaryPost(IFormCollection collection,ProductUserVm productUserVm )
     {
         var claimsIdentity = (ClaimsIdentity)User.Identity;
         var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
@@ -179,7 +180,8 @@ public class CartController : Controller
                 FullName = ProductUserVm.ApplicationUser.Fullname,
                 PhoneNumber= ProductUserVm.ApplicationUser.PhoneNumber,
                 OrderDate = DateTime.Now,
-                OrderStatus = WC.StatusPending
+                OrderStatus = WC.StatusPending,
+                TransactionId = "id_place_holder"
             };
             _orderHeader.Add(orderHeader);
             _orderHeader.Save();
@@ -196,6 +198,30 @@ public class CartController : Controller
                 _orderDetails.Add(orderDetails);
             }
             _orderDetails.Save();
+            string nonceFromClient = collection["payment_method_nonce"];
+            var request = new TransactionRequest
+            {
+                Amount = Convert.ToDecimal(orderHeader.FinalOrderTotal),
+                PaymentMethodNonce = nonceFromClient,
+                OrderId = orderHeader.Id.ToString(),
+                Options = new TransactionOptionsRequest
+                {
+                    SubmitForSettlement = true
+                }
+             };
+             var gateway = _brainTree.GetGateWay();
+             Result<Transaction> result = gateway.Transaction.Sale(request);
+            
+             if (result.Target.ProcessorResponseText == "Approved")
+             {
+                 orderHeader.TransactionId = result.Target.Id;
+                 orderHeader.OrderStatus = WC.StatusApproved;
+             }
+             else
+             {
+                 orderHeader.OrderStatus = WC.StatusCancel;
+             }
+             _orderHeader.Save();
             return RedirectToAction(nameof(InquiryConfirmation), new {id=orderHeader.Id});
         }
         else
@@ -248,9 +274,7 @@ public class CartController : Controller
                 _detailRepository.Save();
             }
         }
-       
-
-       return RedirectToAction(nameof(InquiryConfirmation));
+        return RedirectToAction(nameof(InquiryConfirmation));
     }
 
     [HttpPost]
@@ -271,5 +295,7 @@ public class CartController : Controller
         HttpContext.Session.Clear();
         return View(orderHeader);
     }
+    
+    
 
 }
