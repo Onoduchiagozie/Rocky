@@ -295,7 +295,11 @@ public class CartController : Controller
         HttpContext.Session.Clear();
         return View(orderHeader);
     }
-    
-    
+
+    public IActionResult Clear()
+    {
+        HttpContext.Session.Clear();
+        return RedirectToAction("Index", "Home");
+    }
 
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0m7vUQUznCQz6aYdleE2eAtr8/jnQethM7sEDcmbEtWHNDScKqEezJHqNvWG95SGKn+cz8JY+vhXEGue/CteLw==",
+  "dgSpecHash": "siOTapO8QLHvLDqldru2fzAEjbZUhaaL9QJUxOUyUXSPV3nhoRwM3LMxypfqmYNMIZY6ry1xUcEfiWXcE1ZjHA==",
   "success": true,
   "projectFilePath": "/home/valentine/RiderProjects/Rocky/Rocky/Rocky.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "/home/valentine/.nuget/packages/messagepack/2.1.152/messagepack.2.1.152.nupkg.sha512",
     "/home/valentine/.nuget/packages/messagepack.annotations/2.1.152/messagepack.annotations.2.1.152.nupkg.sha512",
     "/home/valentine/.nuget/packages/messagepackanalyzer/2.1.152/messagepackanalyzer.2.1.152.nupkg.sha512",
+    "/home/valentine/.nuget/packages/microsoft.aspnetcore.authentication.facebook/6.0.9/microsoft.aspnetcore.authentication.facebook.6.0.9.nupkg.sha512",
     "/home/valentine/.nuget/packages/microsoft.aspnetcore.cryptography.internal/6.0.8/microsoft.aspnetcore.cryptography.internal.6.0.8.nupkg.sha512",
     "/home/valentine/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/6.0.8/microsoft.aspnetcore.cryptography.keyderivation.6.0.8.nupkg.sha512",
     "/home/valentine/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/6.0.8/microsoft.aspnetcore.identity.entityframeworkcore.6.0.8.nupkg.sha512",

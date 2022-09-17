@@ -21,8 +21,10 @@ public class WC
     public static string StatusInProgress = "Progress";
     public static string StatusCancel = "Cancel";
     public static string StatusRefunded = "Refunded";
-    
-    
-    
-    
+
+    public static string FaceBookId = "1486844818405809";
+    public static string FaceBookSecret = "52629ca907e0ff7de7937789aab50eef";
+
+
+
 }

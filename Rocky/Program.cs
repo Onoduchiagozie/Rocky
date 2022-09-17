@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Rocky_Utility;
 using Rocky.Data;
 using Rocky.Repository;
 using Rocky.Repository.IRepository;
@@ -31,6 +32,12 @@ builder.Services.AddScoped<IApplicationUserRepository,ApplicationUserRepository>
 builder.Services.AddScoped<IOrderDetailsRepository,OrderDetailRepository>();
 builder.Services.AddScoped<IOrderHeaderRepository,OrderHeaderRepository>();
 
+
+builder.Services.AddAuthentication().AddFacebook(options =>
+{
+    options.AppId = WC.FaceBookId;
+    options.AppSecret = WC.FaceBookSecret;
+});
 
 
 var app = builder.Build();

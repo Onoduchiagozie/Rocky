@@ -285,3 +285,4 @@
 /home/valentine/RiderProjects/Rocky/Rocky/bin/Debug/net6.0/Rocky_Utility.pdb
 /home/valentine/RiderProjects/Rocky/Rocky/bin/Debug/net6.0/Braintree.dll
 /home/valentine/RiderProjects/Rocky/Rocky/bin/Debug/net6.0/System.Xml.XPath.XmlDocument.dll
+/home/valentine/RiderProjects/Rocky/Rocky/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.Facebook.dll
