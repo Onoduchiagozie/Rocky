@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "siOTapO8QLHvLDqldru2fzAEjbZUhaaL9QJUxOUyUXSPV3nhoRwM3LMxypfqmYNMIZY6ry1xUcEfiWXcE1ZjHA==",
+  "dgSpecHash": "q4R34KAXL7SDOT23TBHNltJtzb/jcNKlqmtZkt7fUNl9vKvRfgRn0iimba41/kD+ODF038WwVKf8Qkc0/JE/cw==",
   "success": true,
   "projectFilePath": "/home/valentine/RiderProjects/Rocky/Rocky/Rocky.csproj",
   "expectedPackageFiles": [
@@ -110,6 +110,8 @@
     "/home/valentine/.nuget/packages/runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "/home/valentine/.nuget/packages/runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "/home/valentine/.nuget/packages/runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "/home/valentine/.nuget/packages/syncfusion.ej2.aspnet.core/20.2.0.49/syncfusion.ej2.aspnet.core.20.2.0.49.nupkg.sha512",
+    "/home/valentine/.nuget/packages/syncfusion.licensing/20.2.0.49/syncfusion.licensing.20.2.0.49.nupkg.sha512",
     "/home/valentine/.nuget/packages/system.appcontext/4.3.0/system.appcontext.4.3.0.nupkg.sha512",
     "/home/valentine/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
     "/home/valentine/.nuget/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512",

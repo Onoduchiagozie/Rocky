@@ -14,7 +14,7 @@ public class ProductRepository:Repository<Product>,IProductRepository
 
     public void Update(Product obj)
     {
-        var objFromDb = _db.Category.FirstOrDefault(u=>u.Id==obj.Id);
+        var objFromDb = _db.Products.FirstOrDefault(u=>u.Id==obj.Id);
         if (objFromDb != null)
         {
             _db.Products.Update(obj);

@@ -20,6 +20,6 @@ public class CategoryRepository:Repository<Category>,ICategoryRepository
             objFromDb.Name = obj.Name;
             objFromDb.DisplayOrder = obj.DisplayOrder;
         }
-        throw new NotImplementedException();
+        
     }
 }

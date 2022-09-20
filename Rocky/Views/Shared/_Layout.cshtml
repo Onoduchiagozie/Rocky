@@ -13,19 +13,23 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/Rocky.styles.css" asp-append-version="true"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" 
          href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-    	
-
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+     <!-- Syncfusion ASP.NET Core controls styles -->
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/20.2.43/fluent.css" />
+        <!-- Syncfusion ASP.NET Core controls scripts -->
+    <script src="https://cdn.syncfusion.com/ej2/20.2.43/dist/ej2.min.js"></script>
+    
 
 
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-danger border-bottom box-shadow mb-3">
         <div class="container-fluid">
             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-th-large"></i></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -53,11 +57,10 @@
                         </li>
                         
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="NavBarDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Order/Inquiry Management
-                            </a>
+                            <a class="nav-link dropdown-toggle" id="NavBarDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Order/Inquiry Management</a>
                             <div class="dropdown-menu" aria-labelledby="NavBarDropDown">
-                                <a class="nav-link text-dark" asp-controller=Inquiry asp-action="Index">Inquery     </a>
+                                <a class="nav-link text-dark" asp-controller=Inquiry asp-action="Index">Inquiry</a>
+                                <a class="nav-link text-dark" asp-controller=Order asp-action="Index">Order</a>
                                 </div>
                         </li>
                     }
@@ -91,7 +94,7 @@
     </main>
 </div>
 
-<footer class="border-top footer bg-dark">
+<footer class="border-top footer bg-danger">
     <div class="container text-white-50">
         &copy; 2022 - Rocky - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
     </div>
@@ -106,5 +109,6 @@
 
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 @await RenderSectionAsync("Scripts", required: false)
+<ejs-scripts></ejs-scripts>
 </body>
 </html>

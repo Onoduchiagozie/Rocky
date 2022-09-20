@@ -17,6 +17,7 @@ public class OrderDetails
     [ForeignKey("ProductId")]
     public Product Product { get; set; }
 
+    [Display(Name = "Kg")]
     public int Sqft { get; set; }
     public double PricePerSqFt { get; set; }
 }

@@ -61,7 +61,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
-  background: url('/images/dust_scratches.png');
+  background-color:#F3E8EA;
 }
 
 .footer {

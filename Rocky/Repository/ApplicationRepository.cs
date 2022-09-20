@@ -14,7 +14,7 @@ public class ApplicationRepository:Repository<ApplicationType>,IApplicationTypeR
 
     public void Update(ApplicationType obj)
     {
-        var objFromDb = _db.Category.FirstOrDefault(u=>u.Id==obj.Id);
+        var objFromDb = _db.ApplicationTypes.FirstOrDefault(u=>u.Id==obj.Id);
         if (objFromDb != null)
         {
             objFromDb.Name = obj.Name;
