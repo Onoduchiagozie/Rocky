@@ -1,7 +1,7 @@
 @using Rocky_Utility
 @model OrderHeader
 <div class="text-center">
-    @if (Model.Id != null)
+    @if (User.IsInRole(WC.AdminRole))
     {
         <h1 class="text-info"> Order Created</h1>
         <p>Order @Model.Id has been Created</p>

@@ -167,7 +167,7 @@ public class CartController : Controller
             {
                 orderTotal += product.Price * product.TempSqFt;
             }
-
+            
             OrderHeader orderHeader = new OrderHeader()
             {
                 CreatedByUserId = claim.Value,
@@ -289,7 +289,7 @@ public class CartController : Controller
         HttpContext.Session.Set(WC.SessionCart,shoppingCartList);
         return RedirectToAction(nameof(Index));
     }
-    public IActionResult InquiryConfirmation(int? id)
+    public IActionResult InquiryConfirmation(int id)
     {
         OrderHeader orderHeader = _orderHeader.FirstOrDefault(u => u.Id == id);
         HttpContext.Session.Clear();
@@ -301,5 +301,7 @@ public class CartController : Controller
         HttpContext.Session.Clear();
         return RedirectToAction("Index", "Home");
     }
+
+
 
 }

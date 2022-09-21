@@ -8,7 +8,7 @@ public class Product
 {
     public Product()
     {
-        TempSqFt = 5; 
+        TempSqFt = 50; 
     }
     [Key]
     public int Id { get; set; }
@@ -29,5 +29,8 @@ public class Product
     [ForeignKey("ApplicationTypeId")]
     public  ApplicationType? ApplicationType  { get; set; }
     [NotMapped]
+    [Range(50,1000)]
+    [Display(Name = "KG")]
+    [Required(ErrorMessage = "Any Order Less Than 50KG Is Not Allowed")]
     public int TempSqFt { get; set; }
 }
