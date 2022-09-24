@@ -25,11 +25,7 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {
-              "/home/valentine/RiderProjects/Rocky/Rocky_Utility/Rocky_Utility.csproj": {
-                "projectPath": "/home/valentine/RiderProjects/Rocky/Rocky_Utility/Rocky_Utility.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -101,58 +97,6 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.109/sdk/6.0.109/RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "/home/valentine/RiderProjects/Rocky/Rocky_Utility/Rocky_Utility.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/home/valentine/RiderProjects/Rocky/Rocky_Utility/Rocky_Utility.csproj",
-        "projectName": "Rocky_Utility",
-        "projectPath": "/home/valentine/RiderProjects/Rocky/Rocky_Utility/Rocky_Utility.csproj",
-        "packagesPath": "/home/valentine/.nuget/packages/",
-        "outputPath": "/home/valentine/RiderProjects/Rocky/Rocky_Utility/obj/",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/home/valentine/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

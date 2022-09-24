@@ -26,10 +26,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Rocky_Utility\Rocky_Utility.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
       <Folder Include="Pages" />
     </ItemGroup>
 

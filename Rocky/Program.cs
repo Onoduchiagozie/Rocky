@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Rocky_Utility;
 using Rocky.Data;
+using Rocky.Data.Initialiser;
 using Rocky.Repository;
 using Rocky.Repository.IRepository;
 using Rocky.Utility;
@@ -32,6 +33,7 @@ builder.Services.AddScoped<IApplicationUserRepository,ApplicationUserRepository>
 builder.Services.AddScoped<IOrderDetailsRepository,OrderDetailRepository>();
 builder.Services.AddScoped<IOrderHeaderRepository,OrderHeaderRepository>();
 
+builder.Services.AddScoped<IDbInitializer, DbInitializer>();
 
 builder.Services.AddAuthentication().AddFacebook(options =>
 {
@@ -56,6 +58,12 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+using(var scope = app.Services.CreateScope())
+{
+    var dbInitializer = scope.ServiceProvider.GetRequiredService<IDbInitializer>();
+    // use dbInitializer
+    dbInitializer.Initialize();
+}
 app.UseSession();
 app.UseEndpoints(end => end.MapRazorPages());
 app.MapControllerRoute(

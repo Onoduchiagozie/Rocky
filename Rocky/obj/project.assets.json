@@ -3871,16 +3871,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
-      },
-      "Rocky_Utility/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/Rocky_Utility.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Rocky_Utility.dll": {}
-        }
       }
     }
   },
@@ -10949,11 +10939,6 @@
         "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
-    },
-    "Rocky_Utility/1.0.0": {
-      "type": "project",
-      "path": "../Rocky_Utility/Rocky_Utility.csproj",
-      "msbuildProject": "../Rocky_Utility/Rocky_Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -10967,7 +10952,6 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.0-preview.7.22376.2",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.0-preview.7.22376.2",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.8",
-      "Rocky_Utility >= 1.0.0",
       "Syncfusion.EJ2.AspNet.Core >= 20.2.0.49"
     ]
   },
@@ -10995,11 +10979,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "/home/valentine/RiderProjects/Rocky/Rocky_Utility/Rocky_Utility.csproj": {
-              "projectPath": "/home/valentine/RiderProjects/Rocky/Rocky_Utility/Rocky_Utility.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
