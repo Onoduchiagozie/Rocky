@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'Rocky-Meats'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0C6D5770CC634C59A2170A548E465ED6 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7AA010E0216E4246947794C8229A6259 }}
           package: .
